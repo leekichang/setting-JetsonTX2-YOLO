@@ -2,12 +2,12 @@
 
 setting Jetson TX2 for YOLO test
 
-# PyTorch 1.10 휠 다운로드 & 설치
-wget https://nvidia.box.com/shared/static/fjtbno0vpo676a25cgvuqc1wty0fkkg6.whl -O torch-1.10.0-cp36-cp36m-linux_aarch64.whl
+# JetPack 4.x용 YOLO 컨테이너 실행
 
-sudo apt install python3-pip libopenblas-base libopenmpi-dev
+docker run --rm -it --runtime nvidia --ipc=host -v $(pwd):/workspace ultralytics/ultralytics:latest-jetson-jetpack4
 
-pip3 install torch-1.10.0-cp36-cp36m-linux_aarch64.whl
+yolo predict model=yolov8n.pt source=0
+
 
 
 Python 3.8 가상환경 만들기
