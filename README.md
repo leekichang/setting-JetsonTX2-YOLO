@@ -2,6 +2,14 @@
 
 setting Jetson TX2 for YOLO test
 
+# PyTorch 1.10 휠 다운로드 & 설치
+wget https://nvidia.box.com/shared/static/fjtbno0vpo676a25cgvuqc1wty0fkkg6.whl -O torch-1.10.0-cp36-cp36m-linux_aarch64.whl
+
+sudo apt install python3-pip libopenblas-base libopenmpi-dev
+
+pip3 install torch-1.10.0-cp36-cp36m-linux_aarch64.whl
+
+
 Python 3.8 가상환경 만들기
 
 sudo apt-get install -y python3.8 python3.8-venv python3.8-dev
